@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alegreya", serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --red: #F96167;
+    --green: rgb(80, 122, 87);
+    --secondary-font: "Montez", cursive;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10rem;
+    /* position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff; */
+
+    & .leftheader {
+        width: 50%;
+        font-family: var(--secondary-font);
+        font-size: 3.6rem;
+        font-weight: bolder;
+        color: var(--red);
+    }
+
+    & .rightheader {
+        width: 50%;
+        height: 100%;
+
+        & ul {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 4rem;
+
+            & li {
+                font-family: var(--secondary-font);
+                font-size: 2.4rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all .2s;
+            }
+
+            & li:hover {
+                color: var(--red);
+            }
+        }
+    }
+}
+
+.hero-section {
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* background-color:chocolate; */
+    /* background-color: var(--yellow); */
+    position: relative;
+    /* gap: 10px; */
+
+    & div {
+        /* background-color: pink; */
+        overflow: hidden;
+    }
+
+    & .item1 {
+        grid-area: 1 / 2 / 2 /4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        gap: 20px;
+        padding-bottom: 2rem;
+
+        & h1 {
+            font-size: 6rem;
+            font-weight: bolder;
+
+            & span{
+                color: var(--green);
+            }
+        }
+
+        & h1::first-letter {
+            font-size: 10rem;
+        }
+
+        & .inputgroup {
+            width: 60rem;
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            border-radius: 6px;
+
+            & input {
+                width: 80%;
+                height: 100%;
+                padding: 5px;
+                outline: 0;
+                border: 0;
+                font-size: 1.6rem;
+                border-radius: 6px;
+                padding-left: 2rem;
+            }
+
+            & button {
+                width: 20%;
+                height: 100%;
+                border: 0;
+                background-color: var(--red);
+                font-size: 1.6rem;
+                font-weight: bold;
+                cursor: pointer;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
+        }
+    }
+
+    & .item2,
+    .item3 {
+        grid-area: 1 / 1 / 3/ 2;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+        gap: 10px;
+
+        & .imagediv {
+            width: 90%;
+            height: 48%;
+            background-color: var(--red);
+            border-radius: 12px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: sideup 20s infinite ;
+        }
+
+        & .imagediv:first-child {
+            transform: translateX(-30%);
+            animation: sideleft 20s infinite ;
+        }
+    }
+
+    & .item3 {
+        grid-area: 1/4/3/5;
+        align-items: end;
+
+        & .imagediv{
+            animation: sideupright 20s infinite ;
+        }
+
+        & .imagediv:first-child {
+            transform: translateX(30%);
+            animation: sideright 20s infinite ;
+        }
+    }
+
+    & .item4 {
+        grid-area: 2 / 2 / 3/ 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        & .imagediv {
+            width: 32%;
+            height: 90%;
+            border-radius: 12px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        & .imagediv:first-child{
+            animation: firstedown 20s infinite;
+        }
+
+        & .imagediv:last-child{
+            animation: lastdown 20s  infinite;
+        }
+
+        & .imagediv:nth-child(2) {
+            transform: translateY(40%);
+            animation: middledown 20s infinite;
+        }
+    }
+
+
+    & .down {
+        width: 5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        position: absolute;
+        left: 95%;
+        top: 90%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        border: 0;
+        background-color: var(--green);
+        font-size: 2rem;
+        animation: move .7s infinite alternate;
+        cursor: pointer;
+    }
+
+}
+
+@keyframes move {
+    from {
+        transform: translate(-50%, -20%);
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+    }
+
+}
+
+
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.685) 90%);
+    width: 100%;
+    height: 4em;
+}
+
+
+.section2 {
+    width: 100vw;
+    height: fit-content;
+
+    & .hedaing {
+        width: 100%;
+        height: 10%;
+        display: grid;
+        place-content: center;
+        padding-block: 7rem;
+
+
+        & h1 {
+            font-size: 6.4rem;
+            font-family: var(--secondary-font);
+            font-weight: bolder;
+            color: var(--red);
+            text-decoration: underline;
+        }
+
+
+    }
+
+    & .image-container {
+        width: 100vw;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 25rem);
+        gap: 1rem;
+        place-content: center;
+        padding-bottom: 10rem;
+
+        & .image {
+            width: 25rem;
+            aspect-ratio: 1;
+            position: relative;
+            /* background-color: transparent; */
+            z-index: 1;
+
+            & img {
+                width: 25rem;
+                aspect-ratio: 1;
+                object-fit: cover;
+                cursor: pointer;
+                transition: all .3s;
+                border: 1px solid black;
+                border-radius: 6px;
+            }
+
+            & button {
+                display: none;
+                width: fit-content;
+                height: fit-content;
+                cursor: pointer;
+                background: none;
+                border: 0;
+                font-size: 2.4rem;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                margin: 1rem;
+                animation: come 1s;
+                color: white;
+                transition: all .3s;
+            }
+
+            & button:hover{
+                scale: 1.1;
+            }
+
+            & .edit {
+                left: 0;
+            }
+        }
+
+        & .image:hover {
+            & img {
+                scale: 1.03;
+            }
+
+            & button {
+                display: inline;
+            }
+
+
+        }
+    }
+}
+
+@keyframes come {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+footer {
+    width: 100vw;
+    height: 5vh;
+    display: grid;
+    place-content: center;
+
+    & p {
+        font-size: 2rem;
+        font-family: serif;
+
+        & span {
+            color: var(--red);
+        }
+
+        & a {
+            color: black;
+        }
+    }
+}
+
+
+/* ===============Hero section Animation section ================== */
+
+@keyframes firstedown {
+    0% {
+        transform: translateY(110%);
+        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+    }
+
+    10% {
+        transform: translateY(5%);
+        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+    }
+
+    40% {
+        transform: translateY(5%);
+        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+    }
+
+    50% {
+        transform: translateY(110%);
+        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+    }
+
+    60% {
+        transform: translateY(5%);
+        background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
+    }
+
+    90% {
+        transform: translateY(5%);
+        background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
+    }
+
+    100%{
+        transform: translateY(110%);
+        background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
+    }
+}
+
+
+@keyframes lastdown {
+    0% {
+        transform: translateY(110%);
+        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+    }
+
+    10% {
+        transform: translateY(5%);
+        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+    }
+
+    40% {
+        transform: translateY(5%);
+        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+    }
+
+    50% {
+        transform: translateY(110%);
+        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+    }
+
+    60% {
+        transform: translateY(5%);
+        background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
+    }
+
+    90% {
+        transform: translateY(5%);
+        background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
+    }
+
+    100%{
+        transform: translateY(110%);
+        background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
+    }
+}
+
+
+@keyframes middledown {
+    0% {
+        transform: translateY(100%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+    }
+
+    10% {
+        transform: translateY(40%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+    }
+
+    40% {
+        transform: translateY(40%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+    }
+
+    50% {
+        transform: translateY(100%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+    }
+
+    60% {
+        transform: translateY(40%);
+        background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
+    }
+
+    90% {
+        transform: translateY(40%);
+        background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
+    }
+
+    100%{
+        transform: translateY(100%);
+        background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
+    }
+}
+
+@keyframes sideup {
+    0% {
+        transform: translateY(100%);
+        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+    }
+
+    10% {
+        transform: translateY(0%);
+        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+    }
+
+    40% {
+        transform: translateY(0%);
+        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+    }
+
+    50% {
+        transform: translateY(100%);
+        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+    }
+
+    60% {
+        transform: translateY(0%);
+        background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
+    }
+
+    90% {
+        transform: translateY(0%);
+        background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
+    }
+
+    100%{
+        transform: translateY(100%);
+        background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
+    }
+}
+
+@keyframes sideupright {
+    0% {
+        transform: translateY(100%);
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+    }
+
+    10% {
+        transform: translateY(0%);
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+    }
+
+    40% {
+        transform: translateY(0%);
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+    }
+
+    50% {
+        transform: translateY(100%);
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+    }
+
+    60% {
+        transform: translateY(0%);
+        background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+    }
+
+    90% {
+        transform: translateY(0%);
+        background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+    }
+
+    100%{
+        transform: translateY(100%);
+        background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+    }
+}
+
+
+@keyframes sideleft {
+    0% {
+        transform: translateX(-100%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+    }
+
+    10% {
+        transform: translateX(-30%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+    }
+
+    40% {
+        transform: translateX(-30%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+    }
+
+    50% {
+        transform: translateX(-100%);
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+    }
+
+    60% {
+        transform: translateX(-30%);
+        background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
+    }
+
+    90% {
+        transform: translateX(-30%);
+        background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
+    }
+
+    100%{
+        transform: translateX(-100%);
+        background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
+    }
+}
+
+@keyframes sideright {
+    0% {
+        transform: translateX(100%);
+        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+    }
+
+    10% {
+        transform: translateX(30%);
+        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+    }
+
+    40% {
+        transform: translateX(30%);
+        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+    }
+
+    50% {
+        transform: translateX(100%);
+        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+    }
+
+    60% {
+        transform: translateX(30%);
+        background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+    }
+
+    90% {
+        transform: translateX(30%);
+        background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+    }
+
+    100%{
+        transform: translateX(100%);
+        background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+    }
+}
