@@ -8,6 +8,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    transition: all .5s;
 }
 
 :root {
@@ -20,6 +21,12 @@ body {
     overflow-x: hidden;
 }
 
+dialog{
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
 header {
     width: 100vw;
     height: 10vh;
@@ -27,11 +34,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-inline: 10rem;
-    /* position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: #fff; */
 
     & .leftheader {
         width: 50%;
@@ -75,13 +77,10 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /* background-color:chocolate; */
-    /* background-color: var(--yellow); */
     position: relative;
-    /* gap: 10px; */
+
 
     & div {
-        /* background-color: pink; */
         overflow: hidden;
     }
 
@@ -90,15 +89,16 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: center;
         gap: 20px;
         padding-bottom: 2rem;
+
 
         & h1 {
             font-size: 6rem;
             font-weight: bolder;
 
-            & span{
+            & span {
                 color: var(--green);
             }
         }
@@ -116,6 +116,7 @@ header {
             background-color: white;
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
             border-radius: 6px;
+            transition: all .5s;
 
             & input {
                 width: 80%;
@@ -158,12 +159,12 @@ header {
             border-radius: 12px;
             background-size: cover;
             background-repeat: no-repeat;
-            animation: sideup 20s infinite ;
+            animation: sideup 20s infinite;
         }
 
         & .imagediv:first-child {
             transform: translateX(-30%);
-            animation: sideleft 20s infinite ;
+            animation: sideleft 20s infinite;
         }
     }
 
@@ -171,13 +172,13 @@ header {
         grid-area: 1/4/3/5;
         align-items: end;
 
-        & .imagediv{
-            animation: sideupright 20s infinite ;
+        & .imagediv {
+            animation: sideupright 20s infinite;
         }
 
         & .imagediv:first-child {
             transform: translateX(30%);
-            animation: sideright 20s infinite ;
+            animation: sideright 20s infinite;
         }
     }
 
@@ -195,12 +196,12 @@ header {
             background-repeat: no-repeat;
         }
 
-        & .imagediv:first-child{
+        & .imagediv:first-child {
             animation: firstedown 20s infinite;
         }
 
-        & .imagediv:last-child{
-            animation: lastdown 20s  infinite;
+        & .imagediv:last-child {
+            animation: lastdown 20s infinite;
         }
 
         & .imagediv:nth-child(2) {
@@ -290,7 +291,6 @@ header {
             width: 25rem;
             aspect-ratio: 1;
             position: relative;
-            /* background-color: transparent; */
             z-index: 1;
 
             & img {
@@ -320,7 +320,7 @@ header {
                 transition: all .3s;
             }
 
-            & button:hover{
+            & button:hover {
                 scale: 1.1;
             }
 
@@ -331,7 +331,7 @@ header {
 
         & .image:hover {
             & img {
-                scale: 1.03;
+                scale: 1.04;
             }
 
             & button {
@@ -410,7 +410,7 @@ footer {
         background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
     }
 
-    100%{
+    100% {
         transform: translateY(110%);
         background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
     }
@@ -448,7 +448,7 @@ footer {
         background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
     }
 
-    100%{
+    100% {
         transform: translateY(110%);
         background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
     }
@@ -486,7 +486,7 @@ footer {
         background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
     }
 
-    100%{
+    100% {
         transform: translateY(100%);
         background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
     }
@@ -523,7 +523,7 @@ footer {
         background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
     }
 
-    100%{
+    100% {
         transform: translateY(100%);
         background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
     }
@@ -560,7 +560,7 @@ footer {
         background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
     }
 
-    100%{
+    100% {
         transform: translateY(100%);
         background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
     }
@@ -598,7 +598,7 @@ footer {
         background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
     }
 
-    100%{
+    100% {
         transform: translateX(-100%);
         background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
     }
@@ -635,8 +635,99 @@ footer {
         background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
     }
 
-    100%{
+    100% {
         transform: translateX(100%);
         background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+    }
+}
+
+/* =================Responsive ======================= */
+
+@media only screen and (max-width : 1250px) {
+    html{
+        font-size: 50%;
+    }
+    .hero-section {
+        & .item1 {
+            & .inputgroup {
+                width: 50rem;
+        }
+        }
+    }
+}
+
+@media only screen and (max-width : 850px) {
+    html{
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width : 650px) {
+    html{
+        font-size: 50%;
+    }
+
+    header{
+         & .leftheader{
+            width: 100%;
+            text-align: center;
+            font-size: 4.5rem;
+         }
+
+         & .rightheader{
+            display: none;
+         }
+    }
+
+    .hero-section{
+        height: 70vh;
+        & .item1 {
+            grid-area: 1 / 1 / 2 /5;
+        }
+        & .item2 , .item3{
+            grid-area: 2 / 1 / 3/ 2;
+        }
+
+        & .item3{
+            grid-area: 2/4/3/5;
+        }
+
+        & .item4{
+            & .imagediv {
+                width: 48%;
+            }
+            & .imagediv:nth-child(2) {
+                display: none;
+            }
+        }
+
+        .down{
+            font-size: 1.4rem;
+            left: 50%;
+        }
+    }    
+}
+
+@media only screen and (max-width : 425px){
+    html{
+        font-size: 35%;
+    }
+
+    .hero-section{
+        height: 60vh;
+
+        & .item4{
+            justify-content: center;
+            & .imagediv {
+                width: 90%;
+            }
+            & .imagediv:nth-child(2) {
+                display: none;
+            }
+
+            & .imagediv:last-child {
+                display: none;
+            }
+        }
     }
 }
