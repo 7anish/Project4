@@ -21,11 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-dialog{
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-}
 
 header {
     width: 100vw;

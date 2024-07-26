@@ -20,7 +20,14 @@ const containerreset = () => {
     let html = '';
     const arr = JSON.parse(localStorage.getItem("collection"))
     arr?.forEach((url, index) => {
-        html += `<div class="image" onclick="openmodal(${url})"> <img src="${url}" onerror="this.src='./image/error.webp';" alt=""><button class="edit" onclick="edititme(${index})"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="deleteitem(${index})"><i class="fa-solid fa-trash"></i></button> </div>`
+        html += `<div class="image"> 
+        <img  src="${url}" onerror="this.src='./image/error.webp';" alt="">
+        <button class="edit" onclick="edititme(${index})">
+        <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button onclick="deleteitem(${index})">
+        <i class="fa-solid fa-trash"></i>
+        </button> </div>`
     })
     document.querySelector(".image-container").innerHTML = html
 }
@@ -105,6 +112,4 @@ const down = document.querySelector(".down")
 down.addEventListener('click', () => {
     window.scrollBy(0, window.innerHeight)
 })
-
-// Modal
 
