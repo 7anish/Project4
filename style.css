@@ -21,7 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-
 header {
     width: 100vw;
     height: 10vh;
@@ -134,6 +133,12 @@ header {
                 cursor: pointer;
                 border-top-right-radius: 6px;
                 border-bottom-right-radius: 6px;
+                transition: all .4s;
+            }
+
+            & button:hover{
+                scale: 1.04;
+                color: white;
             }
         }
     }
@@ -377,37 +382,37 @@ footer {
 @keyframes firstedown {
     0% {
         transform: translateY(110%);
-        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+        background-image: url("./image/photo1.jpeg");
     }
 
     10% {
         transform: translateY(5%);
-        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+        background-image: url("./image/photo1.jpeg");
     }
 
     40% {
         transform: translateY(5%);
-        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+        background-image: url("./image/photo1.jpeg");
     }
 
     50% {
         transform: translateY(110%);
-        background-image: url("https://media.flytographer.com/uploads/2023/04/photospots-outdoor-photoshoot-photographer-flytographer-7.jpeg");
+        background-image: url("./image/photo1.jpeg");
     }
 
     60% {
         transform: translateY(5%);
-        background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
+        background-image: url("./image/phpto2.jpg");
     }
 
     90% {
         transform: translateY(5%);
-        background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
+        background-image: url("./image/phpto2.jpg");
     }
 
     100% {
         transform: translateY(110%);
-        background-image: url("https://www.sacredseedphotography.com.au/wp-content/uploads/2022/05/Poppy-1-2400px.jpg");
+        background-image: url("./image/phpto2.jpg");
     }
 }
 
@@ -415,37 +420,37 @@ footer {
 @keyframes lastdown {
     0% {
         transform: translateY(110%);
-        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+        background-image: url("./image/photo3.jpg");
     }
 
     10% {
         transform: translateY(5%);
-        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+        background-image: url("./image/photo3.jpg");
     }
 
     40% {
         transform: translateY(5%);
-        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+        background-image: url("./image/photo3.jpg");
     }
 
     50% {
         transform: translateY(110%);
-        background-image: url("https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg");
+        background-image: url("./image/photo3.jpg");
     }
 
     60% {
         transform: translateY(5%);
-        background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
+        background-image: url("./image/photo4.jpg");
     }
 
     90% {
         transform: translateY(5%);
-        background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
+        background-image: url("./image/photo4.jpg");
     }
 
     100% {
         transform: translateY(110%);
-        background-image: url("https://i0.wp.com/i.pinimg.com/originals/31/5b/89/315b896025e1da6a9fbaf95c836f1b4c.jpg?resize=160,120");
+        background-image: url("./image/photo4.jpg");
     }
 }
 
@@ -453,111 +458,111 @@ footer {
 @keyframes middledown {
     0% {
         transform: translateY(100%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+        background-image: url("./image/photo5.jpg");
     }
 
     10% {
         transform: translateY(40%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+        background-image: url("./image/photo5.jpg");
     }
 
     40% {
         transform: translateY(40%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+        background-image: url("./image/photo5.jpg");
     }
 
     50% {
         transform: translateY(100%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56947d4457eb8dbe26374993/1601063318662-TBPIEBQN933SZGEKL1RO/Classic+Milestone+Session+with+1+Year+of+Photos_Nicole+Starr+Photography_Saratoga+Springs+NY+Baby+Photographer_9.jpg");
+        background-image: url("./image/photo5.jpg");
     }
 
     60% {
         transform: translateY(40%);
-        background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
+        background-image: url("./image/photo6.jpg");
     }
 
     90% {
         transform: translateY(40%);
-        background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
+        background-image: url("./image/photo6.jpg");
     }
 
     100% {
         transform: translateY(100%);
-        background-image: url("https://www.dazzlingdivaphotography.com/wp-content/uploads/2021/05/first-birthday-ideas-dazzling-diva-photography_0041-scaled.jpg");
+        background-image: url("./image/photo6.jpg");
     }
 }
 
 @keyframes sideup {
     0% {
         transform: translateY(100%);
-        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+        background-image: url("./image/photo7.jpg");
     }
 
     10% {
         transform: translateY(0%);
-        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+        background-image: url("./image/photo7.jpg");
     }
 
     40% {
         transform: translateY(0%);
-        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+        background-image: url("./image/photo7.jpg");
     }
 
     50% {
         transform: translateY(100%);
-        background-image: url("https://i.pinimg.com/564x/f4/1e/12/f41e12c4bbf19cbada6192627652fba4.jpg");
+        background-image: url("./image/photo7.jpg");
     }
 
     60% {
         transform: translateY(0%);
-        background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
+        background-image: url("./image/photo8.jpg");
     }
 
     90% {
         transform: translateY(0%);
-        background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
+        background-image: url("./image/photo8.jpg");
     }
 
     100% {
         transform: translateY(100%);
-        background-image: url("https://i.pinimg.com/originals/03/90/58/039058697bcd886ef627857c23511bf4.jpg");
+        background-image: url("./image/photo8.jpg");
     }
 }
 
 @keyframes sideupright {
     0% {
         transform: translateY(100%);
-        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+        background-image: url("./image/photo10.jpeg");
     }
 
     10% {
         transform: translateY(0%);
-        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+        background-image: url("./image/photo10.jpeg");
     }
 
     40% {
         transform: translateY(0%);
-        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+        background-image: url("./image/photo10.jpeg");
     }
 
     50% {
         transform: translateY(100%);
-        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYRjDqF9E29NrvoJac3hogWnBan3jj_aU-Q&s");
+        background-image: url("./image/photo10.jpeg");
     }
 
     60% {
         transform: translateY(0%);
-        background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+        background-image: url("./image/photo11.jpeg");
     }
 
     90% {
         transform: translateY(0%);
-        background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+        background-image: url("./image/photo11.jpeg");
     }
 
     100% {
         transform: translateY(100%);
-        background-image: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+        background-image: url("./image/photo11.jpeg");
     }
 }
 
@@ -565,74 +570,74 @@ footer {
 @keyframes sideleft {
     0% {
         transform: translateX(-100%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+        background-image: url("./image/dog1.jpg");
     }
 
     10% {
         transform: translateX(-30%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+        background-image: url("./image/dog1.jpg");
     }
 
     40% {
         transform: translateX(-30%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+        background-image: url("./image/dog1.jpg");
     }
 
     50% {
         transform: translateX(-100%);
-        background-image: url("https://images.squarespace-cdn.com/content/v1/56ff291160b5e92eb85ece6d/1685578245794-6UHN6X9O9ZA7VND5MABO/Pet_Photography_Siberian_Husky_Ohio1.jpg");
+        background-image: url("./image/dog1.jpg");
     }
 
     60% {
         transform: translateX(-30%);
-        background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
+        background-image: url("./image/dog2.jpg");
     }
 
     90% {
         transform: translateX(-30%);
-        background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
+        background-image: url("./image/dog2.jpg");
     }
 
     100% {
         transform: translateX(-100%);
-        background-image: url("https://www.wildwatchereve.co.uk/uploads/1/3/1/2/13129036/dsc3416_4_orig.jpg");
+        background-image: url("./image/dog2.jpg");
     }
 }
 
 @keyframes sideright {
     0% {
         transform: translateX(100%);
-        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+        background-image: url("./image/Bride.jpg");
     }
 
     10% {
         transform: translateX(30%);
-        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+        background-image: url("./image/Bride.jpg");
     }
 
     40% {
         transform: translateX(30%);
-        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+        background-image: url("./image/Bride.jpg");
     }
 
     50% {
         transform: translateX(100%);
-        background-image: url("https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2020/04/Indian-Bride-Feature-Image.jpg");
+        background-image: url("./image/Bride.jpg");
     }
 
     60% {
         transform: translateX(30%);
-        background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+        background-image: url("./image/groom.jpg");
     }
 
     90% {
         transform: translateX(30%);
-        background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+        background-image: url("./image/groom.jpg");
     }
 
     100% {
         transform: translateX(100%);
-        background-image: url("https://i.pinimg.com/originals/81/27/f3/8127f39490ad7dcfb567fa213d65a843.jpg");
+        background-image: url("./image/groom.jpg");
     }
 }
 
