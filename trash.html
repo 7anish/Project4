@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +15,6 @@
     <link rel="icon" href="./image/favicon.ico">
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
     <header>
         <div class="leftheader">
@@ -24,51 +22,29 @@
         </div>
         <div class="rightheader">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="./trash.html">Trash</a></li>
+                <li><a href="#">Trash</a></li>
             </ul>
         </div>
     </header>
-    <section class="hero-section">
-        <div class="item1">
-            <h1>Store your <Span>Smile</Span></h1>
-            <div class="inputgroup">
-                <input id="url" type="text" placeholder="Enter Photo Url">
-                <button id="add">+ Add</button>
-            </div>
-        </div>
-        <div class="item2">
-            <div class="imagediv"></div>
-            <div class="imagediv"></div>
-        </div>
-        <div class="item3">
-            <div class="imagediv"></div>
-            <div class="imagediv"></div>
-        </div>
-        <div class="item4">
-            <div class="imagediv"></div>
-            <div class="imagediv"></div>
-            <div class="imagediv"></div>
-        </div>
-        <button class="down">
-            <i class="fa-solid fa-angle-down"></i>
-        </button>
-    </section>
-
     <section class="section2">
         <div class="hedaing">
-            <h1>&nbsp;Your photos&nbsp;</h1>
+            <h1>&nbsp;Recycle Bin&nbsp;</h1>
         </div>
-        <div class="image-container"></div>
+        <div class="image-container">
+            <div class="empty">
+                <img style="align-self: center;" src="./image/empty.png" alt="">
+            </div>
+        </div>
     </section>
     <div class="buttondiv">
-        <button class="clear-button"><a href="./trash.html"><img width="25" height="25" src="https://img.icons8.com/glyph-neue/64/recycle-bin.png" alt="recycle-bin"/></a></button>
+        <button class="clear-button"><i class="fa-solid fa-trash"></i></button>
     </div>
     <footer>
         <p>Made with<span>&#9829;</span> By <a href="https://github.com/7anish">Anish</a></p>
     </footer>
-    <script src="./script.js"> </script>
+    <script src="./trash.js"></script>
 </body>
 </html>

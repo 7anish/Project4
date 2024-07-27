@@ -42,6 +42,11 @@ firstload();
 // Delete button
 const deleteitem = (i) => {
     const arr = JSON.parse(localStorage.getItem("collection"))
+    const trash = JSON.parse(localStorage.getItem("Trash")) ?? [];
+
+    trash.push(arr[i])
+    localStorage.setItem("Trash", JSON.stringify(trash));
+
     arr.splice(i, 1);
     localStorage.setItem("collection", JSON.stringify(arr))
     containerreset();
@@ -77,11 +82,9 @@ const checkurl = async (url) => {
         const res = await fetch(url);
         console.log(res.status)
         if (res.status == 200) {
-            console.log("Anish");
             return true
         }
         else {
-            console.log("Anish1");
             return false
         }
     } catch (e) {

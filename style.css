@@ -51,16 +51,21 @@ header {
             gap: 4rem;
 
             & li {
-                font-family: var(--secondary-font);
-                font-size: 2.4rem;
-                font-weight: bold;
-                cursor: pointer;
-                transition: all .2s;
+                & a {
+                    text-decoration: none;
+                    font-family: var(--secondary-font);
+                    font-size: 2.4rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: all .2s;
+                    color: black;
+                }
+
+                & a:hover {
+                    color: var(--red);
+                }
             }
 
-            & li:hover {
-                color: var(--red);
-            }
         }
     }
 }
@@ -136,7 +141,7 @@ header {
                 transition: all .4s;
             }
 
-            & button:hover{
+            & button:hover {
                 scale: 1.04;
                 color: white;
             }
@@ -353,6 +358,57 @@ header {
         opacity: 1;
         transform: translateY(0%);
     }
+}
+
+.buttondiv{
+    width: 100vw;
+    height: fit-content;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clear-button{
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius:50%;
+    border: 1px solid ;
+    font-size: 1.8rem;
+    background-color: var(--green);
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .3s;
+    color: white;
+    position: absolute;
+    right: 5%;
+     & a{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+     }
+
+}
+.empty{
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    place-content: center;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        scale: 2;
+    }
+
+}
+.clear-button:hover{
+    scale: 1.1;
+    color: white;
 }
 
 
@@ -644,83 +700,90 @@ footer {
 /* =================Responsive ======================= */
 
 @media only screen and (max-width : 1250px) {
-    html{
+    html {
         font-size: 50%;
     }
+
     .hero-section {
         & .item1 {
             & .inputgroup {
                 width: 50rem;
-        }
+            }
         }
     }
 }
 
 @media only screen and (max-width : 850px) {
-    html{
+    html {
         font-size: 40%;
     }
 }
 
 @media only screen and (max-width : 650px) {
-    html{
+    html {
         font-size: 50%;
     }
 
-    header{
-         & .leftheader{
+    header {
+        & .leftheader {
             width: 100%;
             text-align: center;
             font-size: 4.5rem;
-         }
+        }
 
-         & .rightheader{
+        & .rightheader {
             display: none;
-         }
+        }
     }
 
-    .hero-section{
+    .hero-section {
         height: 70vh;
+
         & .item1 {
             grid-area: 1 / 1 / 2 /5;
         }
-        & .item2 , .item3{
+
+        & .item2,
+        .item3 {
             grid-area: 2 / 1 / 3/ 2;
         }
 
-        & .item3{
+        & .item3 {
             grid-area: 2/4/3/5;
         }
 
-        & .item4{
+        & .item4 {
             & .imagediv {
                 width: 48%;
             }
+
             & .imagediv:nth-child(2) {
                 display: none;
             }
         }
 
-        .down{
+        .down {
             font-size: 1.4rem;
             left: 50%;
         }
-    }    
+    }
 }
 
-@media only screen and (max-width : 425px){
-    html{
+@media only screen and (max-width : 425px) {
+    html {
         font-size: 35%;
     }
 
-    .hero-section{
+    .hero-section {
         height: 60vh;
 
-        & .item4{
+        & .item4 {
             justify-content: center;
+
             & .imagediv {
                 width: 90%;
             }
+
             & .imagediv:nth-child(2) {
                 display: none;
             }
