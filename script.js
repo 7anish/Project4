@@ -72,7 +72,8 @@ const edititme = async (i) => {
 // const checkurl = (url) => {
 //     return (/(https?:\/\/.*\.(?:png|jpg|webp|jpeg))/i).test(url)
 // }
-// Checking by async and await function
+
+// Checking by async and await function and width of img
 
 const checkurl = async (url) => {
     if (url.trim() == "") {
@@ -81,7 +82,13 @@ const checkurl = async (url) => {
     try {
         const res = await fetch(url);
         console.log(res.status)
-        if (res.status == 200) {
+        const  img = new Image();
+        console.log(img.src) 
+        img.src = await url
+        console.log(img.width)
+        console.log(img.src) 
+        console.log(img.width)
+        if (res.status == 200 && !(img.width == 0)) {
             return true
         }
         else {
@@ -110,6 +117,7 @@ const checkurl = async (url) => {
 //         return true
 //     }
 // }
+
 
 // scroll button
 const down = document.querySelector(".down")

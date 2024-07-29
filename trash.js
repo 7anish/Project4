@@ -15,7 +15,6 @@ const containerreset = () => {
         document.querySelector(".image-container").innerHTML = html
 }
 
-
 const firstload = () => {
     containerreset()
 }
