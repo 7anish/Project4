@@ -2,6 +2,7 @@ const addbtn = document.getElementById("add")
 addbtn.addEventListener('click', async () => {
     const url = document.getElementById("url").value;
     const isvalidurl = await checkurl(url);
+    console.log(isvalidurl)
     if (isvalidurl) {
         const arr = JSON.parse(localStorage.getItem("collection")) ?? [];
         arr.push(url)
@@ -75,30 +76,87 @@ const edititme = async (i) => {
 
 // Checking by async and await function and width of img
 
+// const checkurl = async (url) => {
+//     if (url.trim() == "") {
+//         return isvalidurl = false;
+//     }
+//     try {
+//         const res = await fetch(url);
+//         console.log(res.status)
+//         const  img = new Image();
+//         img.src = url
+//         img.onload = ()=>{
+//             if (res.status == 200 && !(img.width == 0)) {
+//                 console.log("hello")
+//                 isvalidurl = true
+//                 console.log(isvalidurl)
+//             }
+//             else {
+//                 console.log("hell2")
+//                 isvalidurl = false
+//                 console.log(isvalidurl)
+//             }
+//         }
+//     } catch (e) {
+//         console.log(e);
+//         return isvalidurl = false;  
+//     }
+// }
+
+
+// promise
+
 const checkurl = async (url) => {
-    if (url.trim() == "") {
-        return false
-    }
-    try {
-        const res = await fetch(url);
-        console.log(res.status)
-        const  img = new Image();
-        console.log(img.src) 
-        img.src = await url
-        console.log(img.width)
-        console.log(img.src) 
-        console.log(img.width)
-        if (res.status == 200 && !(img.width == 0)) {
-            return true
+    return new Promise((resolve , reject)=>{
+        if (url.trim() == "") {
+            resolve(false)
         }
-        else {
-            return false
-        }
-    } catch (e) {
-        console.log(e);
-        return false
-    }
+        fetch(url).then(res => {
+            const img = new Image();
+            console.log(img.width)
+            img.src = url;
+            img.onload = () => {
+                console.log(img.width)
+                if (res.status == 200 && !(img.width == 0)) {
+                    resolve(true)
+                }
+                else {
+                    console.log("hooo")
+                    resolve(false)
+                }
+            }
+        })
+        .catch(e =>{
+            console.log("hii")
+            resolve(false)
+        })
+    })
 }
+
+
+// const checkurl = (url) => {
+// if (url.trim() == "") {
+//     return false
+// }
+// fetch(url).then(res => {
+//     const img = new Image();
+//     img.src = url;
+//     img.onload = () => {
+//         if (res.status == 200 && !(img.width == 0)) {
+//             console.log("hello")
+//             return true
+//         }
+//         else {
+//             console.log("hell2")
+//             return  false
+//         }
+//     }
+// })
+// .catch(e =>{
+//     console.log(e)
+//     return false;
+// })
+// }
 
 
 // checking imag is valid or not by creating an image object
