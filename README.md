@@ -1,4 +1,4 @@
-# Welcome to Photo Gallery!
+# Welcome to Photo Gallery
 
 Photo Gallery is your ultimate photo storage solution, designed to keep your favorite images safe and accessible whenever you need them. With MyPhotoVault, you can:
 
